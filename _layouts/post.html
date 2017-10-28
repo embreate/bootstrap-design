@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="grid row">
+    <div class="col-md-8">
+      <img class="img-responsive" src="/assets/{{ page.image | prepend: site.baseurl }}">
+    </div>
+    <div class="box col-md-4">
+      <h4>{{ page.categories | last | upcase }}</h4>
+      <h3>{{ page.title | capitalize }}</h3>
+      <br>
+      {{ content }}
+    </div>
+  </div>
+
+  {% for image in page.images %}
+    <img class="img-responsive" src="/assets/{{ image | prepend: site.baseurl }}">
+  {% endfor %}
+
+</article>

@@ -1,0 +1,80 @@
+---
+layout: page
+title: Retail
+permalink: /retail/
+
+---
+
+{% assign lastTitle = site.categories.retail | last %}
+{% assign colNumber = 1 | plus: 0 %}
+{% assign index = 0 | plus: 0 %}
+{% for post in site.categories.retail %}
+
+	{% assign index = index | plus: 1 %}
+	
+	{% if colNumber == 1 %}
+		<div class="grid row">
+	{% endif %}
+
+	<div class="box col-xs-6 col-sm-3">
+			{% if post.postPage != false %}
+			<a href="{{post.url}}">{{post.postPage}}
+			{% endif %}
+				{% assign numberImages = post.images | size | plus: 0 %}
+				{% if numberImages > 0 %}
+					<div id="carousel{{index}}" class="carousel slide" data-ride="carousel" data-interval="false">
+					  <!-- Wrapper for slides -->
+					  <!--<a href="{{post.url}}">-->
+					  <div class="carousel-inner" role="listbox">
+					    {% for image in post.images %}
+						    <div class="item {% if forloop.first == true %}active{% endif %}">
+						      <img src="../assets/{{ image | prepend: site.baseurl }}" alt="{{image.name}}">
+						    </div>
+					    {% endfor %}
+					  </div>
+					  <!--</a>-->
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel{{index}}" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel{{index}}" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
+				{% else %}
+					<img class="img-responsive" src="../assets/{{ post.image | prepend: site.baseurl }}">
+				{% endif %}
+			
+			{% if post.postPage != false %}
+			</a>
+			{% endif %}
+
+			<h4>
+				{% for category in post.categories %}
+					{% if category != "project" %}
+						<a class="category" href="/{{ category}}">{{ category | upcase }}</a>
+					{% endif %}
+				{% endfor %}
+			</h4>
+
+			{% if post.postPage != false %}
+			<a href="{{post.url}}">
+			{% endif %}
+				<h3>{{ post.title}}</h3>
+			{% if post.postPage != false %}
+			</a>
+			{% endif %}
+		</div>
+
+
+	{% assign colNumber = colNumber | plus: 1 %}
+
+	{% if lastTitle.title == post.title %}
+		</div>
+	{% elsif colNumber == 5 %}
+		</div>
+		{% assign colNumber = 1 | plus: 0 %}
+	{% endif %}
+{% endfor %}

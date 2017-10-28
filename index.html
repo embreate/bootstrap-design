@@ -1,0 +1,144 @@
+---
+layout: default
+
+---
+
+{% assign lastTitle = site.posts | last %}
+{% assign colNumber = 1 | plus: 0 %}
+{% assign index = 0 | plus: 0 %}
+{% for post in site.posts %}
+	{% if post.categories contains "project" or post.categories contains "blog" %}
+
+		{% assign index = index | plus: 1 %}
+		
+		{% if colNumber == 1 %}
+			<div class="grid row">
+		{% endif %}
+
+		<div class="box col-xs-6 col-sm-3">
+			{% if post.postPage != false %}
+			<a href="{{post.url}}">{{post.postPage}}
+			{% endif %}
+				{% assign numberImages = post.images | size | plus: 0 %}
+				{% if numberImages > 0 %}
+					<div id="carousel{{index}}" class="carousel slide" data-ride="carousel" data-interval="false">
+					  <!-- Wrapper for slides -->
+					  <!--<a href="{{post.url}}">-->
+					  <div class="carousel-inner" role="listbox">
+					    {% for image in post.images %}
+						    <div class="item {% if forloop.first == true %}active{% endif %}">
+						      <img src="/assets/{{ image | prepend: site.baseurl }}" alt="{{image.name}}">
+						    </div>
+					    {% endfor %}
+					  </div>
+					  <!--</a>-->
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel{{index}}" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel{{index}}" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
+				{% else %}
+					<img class="img-responsive" src="{{ post.image | prepend: site.baseurl }}">
+				{% endif %}
+			
+			{% if post.postPage != false %}
+			</a>
+			{% endif %}
+
+			<h4>
+				{% for category in post.categories %}
+					{% if category != "project" %}
+						<a class="category" href="/{{ category}}">{{ category | upcase }}</a>
+					{% endif %}
+				{% endfor %}
+			</h4>
+
+			{% if post.postPage != false %}
+			<a href="{{post.url}}">
+			{% endif %}
+				<h3>{{ post.title}}</h3>
+			{% if post.postPage != false %}
+			</a>
+			{% endif %}
+		</div>
+
+
+		
+
+		{% assign colNumber = colNumber | plus: 1 %}
+
+		{% if lastTitle.title == post.title %}
+			</div>
+		{% elsif colNumber == 5 %}
+			</div>
+			{% assign colNumber = 1 | plus: 0 %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+
+
+
+
+<div class="section-break"></div>
+{% assign lastTitle = site.categories.team | last %}
+{% assign colNumber = 1 | plus: 0 %}
+{% assign index = 0 | plus: 0 %}
+{% for post in site.categories.team %}
+	{% assign index = index | plus: 1 %}
+	
+	{% if colNumber == 1 %}
+		<div class="grid row">
+	{% endif %}
+
+	<div class="box col-xs-6 col-sm-3">
+		<img class="img-responsive" src="{{ post.image }}">
+
+		<h4>{{ post.categories | last | upcase }}</h4>
+		<h3>{{ post.title | capitalize }}</h3>
+	</div>
+
+	{% assign colNumber = colNumber | plus: 1 %}
+
+	{% if lastTitle.title == post.title %}
+		</div>
+	{% elsif colNumber == 5 %}
+		</div>
+		{% assign colNumber = 1 | plus: 0 %}
+	{% endif %}
+
+{% endfor %}
+
+
+
+<script>
+	(function($){
+		$('#thumbcarousel').carousel(0);
+		var $thumbItems = $('#thumbcarousel .item');
+	    $('#carousel').on('slide.bs.carousel', function (event) {
+		   var $slide = $(event.relatedTarget);
+		   var thumbIndex = $slide.data('thumb');
+		   var curThumbIndex = $thumbItems.index($thumbItems.filter('.active').get(0));
+			if (curThumbIndex>thumbIndex) {
+				$('#thumbcarousel').one('slid.bs.carousel', function (event) {
+					$('#thumbcarousel').carousel(thumbIndex);
+				});
+				if (curThumbIndex === ($thumbItems.length-1)) {
+					$('#thumbcarousel').carousel('next');
+				} else {
+					$('#thumbcarousel').carousel(numThumbItems-1);
+				}
+			} else {
+				$('#thumbcarousel').carousel(thumbIndex);
+			}
+		});
+})(jQuery);
+
+</script>
+
+		
