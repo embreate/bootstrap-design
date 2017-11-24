@@ -63,6 +63,16 @@
 	width: 100px;
 }
 
+.navbar h1{
+	font-size: 140%;
+}
+
+.navbar h2{
+	font-size: 130%;
+	margin: 0;
+}
+
+
 /* right navigation collapsed */
 
 /* see media query below... */
@@ -89,9 +99,12 @@
 	padding-bottom: 20px;
 }
 
-.copyright{
+.footer .copyright{
 	font-weight: 200;
+}
 
+.footer .address p {
+	margin: 0;
 }
 
 /* =======================

@@ -13,7 +13,6 @@ images:
 - img-project/summerhill-2-615x615.jpg
 - img-project/summerhill-3-615x615.jpg
 - img-project/summerhill-4-615x615.jpg
-- img-project/summerhill-5-615x615.jpg
 - img-project/summerhill-6-615x615.jpg
 - img-project/summerhill-7-615x615.jpg
 - img-project/summerhill-8-615x615.jpg
