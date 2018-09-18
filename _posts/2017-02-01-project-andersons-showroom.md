@@ -2,7 +2,7 @@
 layout: post
 client: "Anderson's Showroom"
 title:  "Anderson's Toronto Showroom"
-date:   2017-05-01 10:00:30 -0500
+date: 2015-10-01 10:00:30 -0500
 categories: [project, retail, millwork]
 feature: true
 postPage: false
