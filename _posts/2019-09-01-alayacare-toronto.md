@@ -9,7 +9,7 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/ALAYA-01-615x615.jpg
+- img-project/ALAYA-1-615x615.jpg
 - img-project/ALAYA-02-615x615.jpg
 - img-project/ALAYA-03-615x615.jpg
 - img-project/ALAYA-04-615x615.jpg
