@@ -9,13 +9,13 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/HP-1-615x615.JPG
-- img-project/HP-2-615x615.JPG
-- img-project/HP-3-615x615.JPG
-- img-project/HP-4-615x615.JPG
-- img-project/HP-5-615x615.JPG
-- img-project/HP-6-615x615.JPG
-- img-project/HP-7-615x615.JPG
+- img-project/HP-1-615x615-edited.jpg
+- img-project/HP-2-615x615-edited.jpg
+- img-project/HP-3-615x615-edited.jpg
+- img-project/HP-4-615x615-edited.jpg
+- img-project/HP-5-615x615-edited.jpg
+- img-project/HP-6-615x615-edited.jpg
+- img-project/HP-7-615x615-edited.jpg
 
 ---
 
