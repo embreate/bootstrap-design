@@ -9,8 +9,8 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/CMA-1-615x615-edited.jpg
-- img-project/CMA-2-615x615-edited.jpg
+- img-project/cma-1-615x615-edited.jpg
+- img-project/cma-2-615x615-edited.jpg
 
 
 ---

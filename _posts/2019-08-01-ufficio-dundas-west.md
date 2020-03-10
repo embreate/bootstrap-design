@@ -9,8 +9,8 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/UFF-1-615x615-edited.jpg
-- img-project/UFF-2-615x615-edited.jpg
+- img-project/uff-1-615x615-edited.jpg
+- img-project/uff-2-615x615-edited.jpg
 
 ---
 
