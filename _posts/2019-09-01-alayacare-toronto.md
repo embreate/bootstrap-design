@@ -10,8 +10,8 @@ postPage: false
 tags:
 images: 
 - img-project/alaya-1-615X615-edited.jpg
-- img-project/ALAYA-02-615x615.jpg
-- img-project/ALAYA-03-615x615.jpg
+- img-project/ALAYA-2-615x615-edited.jpg
+- img-project/alaya-3-615x615-edited.jpg
 - img-project/ALAYA-04-615x615.jpg
 
 ---
