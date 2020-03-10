@@ -9,7 +9,7 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/hp-1-615x615-edited.jpg
+- img-project/hp-1-615x615-edited2.jpg
 - img-project/hp-2-615x615-edited.jpg
 - img-project/hp-3-615x615-edited.jpg
 - img-project/hp-4-615x615-edited.jpg

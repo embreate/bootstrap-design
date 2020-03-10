@@ -9,7 +9,7 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/cma-1-615x615-edited.jpg
+- img-project/cma-1-615x615-edited2.jpg
 - img-project/cma-2-615x615-edited.jpg
 
 
