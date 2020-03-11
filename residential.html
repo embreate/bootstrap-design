@@ -16,7 +16,7 @@ permalink: /residential/
 		<div class="grid row">
 	{% endif %}
 
-	<div class="box col-xs-6 col-sm-3">
+	<div class="box col-xs-12 col-sm-4">
 			{% if post.postPage != false %}
 			<a href="{{post.url}}">{{post.postPage}}
 			{% endif %}
@@ -67,7 +67,7 @@ permalink: /residential/
 
 	{% if lastTitle.title == post.title %}
 		</div>
-	{% elsif colNumber == 5 %}
+	{% elsif colNumber == 4 %}
 		</div>
 		{% assign colNumber = 1 | plus: 0 %}
 	{% endif %}
