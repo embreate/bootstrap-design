@@ -9,10 +9,10 @@ feature: true
 postPage: false
 tags:
 images: 
-- img-project/alaya-1-615X615-edited.jpg
-- img-project/alaya-2-615x615-edited2.jpg
-- img-project/alaya-3-615x615-edited2.jpg
-- img-project/alaya-4-615x615-edited2.jpg
+- img-project/alaya1.jpg
+- img-project/alaya2.jpg
+- img-project/alaya3.jpg
+- img-project/alaya4.jpg
 
 ---
 
