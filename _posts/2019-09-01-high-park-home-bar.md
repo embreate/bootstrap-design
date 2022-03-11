@@ -3,7 +3,7 @@
 layout: post
 client: 
 title:  "High Park Home Bar"
-date: 2017-09-01 10:00:30 -0500
+date: 2019-09-01 10:00:30 -0500
 categories: [project, residential, millwork]
 feature: true
 postPage: false
