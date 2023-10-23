@@ -1,7 +1,7 @@
 ---
 layout: post
 client: "Cops "
-title: "Cops Leaside"
+title: "Cops Donuts Leaside"
 date: 2023-10-13 06:00:00 -0500
 categories: [project, food, retail]
 feature: true

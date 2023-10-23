@@ -1,7 +1,7 @@
 ---
 layout: post
 client: "Cops Yorkdale"
-title: "Cops Yorkdale"
+title: "Cops Donuts Yorkdale"
 date: 2023-10-13 02:00:00 -0500
 categories: [project, food, retail]
 feature: true

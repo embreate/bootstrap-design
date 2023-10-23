@@ -1,7 +1,7 @@
 ---
 layout: post
 client: "Throwback Vault"
-title: "Throwback Vault Retail Space"
+title: "Throwback Vault Square One"
 date: 2023-10-13 4:00:00 -0500
 categories: [project, retail]
 feature: true
