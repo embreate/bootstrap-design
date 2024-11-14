@@ -17,9 +17,9 @@ permalink: /food/
 	{% endif %}
 
 	<div class="box col-xs-12 col-sm-4">
-			{% if post.postPage != false %}
-			<a href="{{post.url}}">{{post.postPage}}
-			{% endif %}
+		{% if post.externalLink %}
+		<a href="{{post.externalLink}}" target="_blank">
+		{% endif %}
 				{% assign numberImages = post.images | size | plus: 0 %}
 				{% if numberImages > 0 %}
 					<div id="carousel{{index}}" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -47,7 +47,7 @@ permalink: /food/
 					<img class="img-responsive" src="../assets/{{ post.image | prepend: site.baseurl }}">
 				{% endif %}
 			
-			{% if post.postPage != false %}
+			{% if post.externalLink %}
 			</a>
 			{% endif %}
 
@@ -60,11 +60,11 @@ permalink: /food/
 			</h4>-->
 			<br>
 
-			{% if post.postPage != false %}
-			<a href="{{post.url}}">
+			{% if post.externalLink %}
+			<a href="{{post.externalLink}}" target="_blank">
 			{% endif %}
 				<h3>{{ post.title}}</h3>
-			{% if post.postPage != false %}
+			{% if post.externalLink %}
 			</a>
 			{% endif %}
 		</div>
