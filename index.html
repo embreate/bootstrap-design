@@ -16,8 +16,8 @@ layout: default
 		{% endif %}
 
 		<div class="box col-xs-12 col-sm-4">
-			{% if post.postPage != false %}
-			<a href="{{post.url}}">{{post.postPage}}
+			{% if post.externalLink %}
+			<a href="{{post.externalLink}}" target="_blank">
 			{% endif %}
 				{% assign numberImages = post.images | size | plus: 0 %}
 				{% if numberImages > 0 %}
@@ -32,6 +32,7 @@ layout: default
 					    {% endfor %}
 					  </div>
 					  <!--</a>-->
+					  {% if numberImages > 1 %}
 					  <!-- Controls -->
 					  <a class="left carousel-control" href="#carousel{{index}}" role="button" data-slide="prev">
 					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -41,14 +42,14 @@ layout: default
 					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					    <span class="sr-only">Next</span>
 					  </a>
+					  {% endif %}
 					</div>
 				{% else %}
 					<img class="img-responsive" src="{{ post.image | prepend: site.baseurl }}">
 				{% endif %}
-			
-			{% if post.postPage != false %}
-			</a>
-			{% endif %}
+				{% if post.externalLink %}
+				</a>
+				{% endif %}
 
 			<!--<h4>
 				{% for category in post.categories %}
@@ -59,11 +60,11 @@ layout: default
 			</h4>-->
 			<br>
 
-			{% if post.postPage != false %}
-			<a href="{{post.url}}">
+			{% if post.externalLink %}
+			<a href="{{post.externalLink}}" target="_blank">
 			{% endif %}
 				<h3>{{ post.title}}</h3>
-			{% if post.postPage != false %}
+			{% if post.externalLink %}
 			</a>
 			{% endif %}
 		</div>

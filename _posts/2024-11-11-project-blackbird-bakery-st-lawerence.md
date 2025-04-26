@@ -2,7 +2,7 @@
 layout: post
 client: "Blackbird Bakery"
 title: "Blackbird Bakery St Lawrence"
-date: 2024-11-11 05:00:00 -0500
+date: 2024-11-11 06:00:00 -0500
 categories: [project, retail, food]
 feature: true
 postPage: false
