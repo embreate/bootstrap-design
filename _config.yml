@@ -9,16 +9,15 @@
 title: Bootstrap Design
 email: info@bootstrapdesign.ca
 permalink: /:categories/:title.html
-description: We are a Creative Contractor. We do design & construction for homeowners & businesses with unique projects.
+description: We provide Construction Management and General Contracting for businesses with unique projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bootstrapdesign.ca" # the base hostname & protocol for your site
 twitter_username:
 facebook_username:
-tumblr_username:	
+tumblr_username:
 instagram_username: bootstrapdesign
 github_username:
 linkedin_username:
-
 
 # Build settings
 markdown: kramdown
